@@ -1,0 +1,13 @@
+This Folder Will Contain these features
+
+1- Data
+2- Methods
+3- Data Binding  :
+4- Events
+5- Events Modifiers like  @click.prevent  @click.once  
+6- Keyboard Events  like  @keyup  @keydown  @keydown.enter
+7- Two Way Data Binding Using v-model
+8- Computed
+9- Dynamic Classes & Styles
+10- If Condition  v-if   v-else-if   v-else
+11- For  v-for
