@@ -1,0 +1,1 @@
+1- emit >> $emit is used to send event from child to parent

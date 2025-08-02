@@ -1,0 +1,8 @@
+
+1- Props is used to send data from Parent (Props Page)  to Child (Props Component)
+when the Parent use Child 
+
+2- in Reference types when change on it it will change in all components as this data is reference type
+(it update in the parent data)
+
+3- 2- in Premitive types when change on it it will change in only the components that has the data 
