@@ -5,8 +5,20 @@
     </div>
     <div class="links">
       <ul>
-        <li v-for="(item, index) in links" :key="index">
-          {{ item }}
+        <li v-for="item in myRoutes" :key="item.name">
+          <router-link
+            v-if="item.meta.requiresParams"
+            :to="{
+              name: item.name,
+              params: { userId: 100, userName: 'Ali' },
+              query: { grade: 'Grade 5', age: 32 },
+            }"
+            >{{ item.meta.title }}
+          </router-link>
+
+          <router-link v-else :to="{ name: item.name }">{{
+            item.meta.title
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -21,8 +33,11 @@
 export default {
   data() {
     return {
-      links: ["Link One", "Link Two", "Link Three"],
+      myRoutes: [],
     };
+  },
+  mounted() {
+    this.myRoutes = this.$router.options.routes.filter((c) => c.meta.isActive);
   },
 };
 </script>
